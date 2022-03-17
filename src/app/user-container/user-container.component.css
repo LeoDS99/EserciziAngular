@@ -1,0 +1,9 @@
+#container {
+  background-color: lightblue;
+  width: 45vw;
+  height: 80vh;
+  text-align: center;
+}
+#flex {
+  height: 90%;
+}
