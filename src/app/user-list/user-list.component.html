@@ -1,0 +1,12 @@
+<div
+  class="d-flex align-items-center mb-2"
+  *ngFor="let user of Users; index as i"
+>
+  <p>{{ i + 1 }}.</p>
+  <img src="{{ user.profilePhotoUrl }}" alt="" width="150" height="150" />
+  <div>
+    <strong>{{ user.name }} {{ user.surname }}</strong>
+  </div>
+  <div>{{ user.age }}</div>
+  <div>{{ user.address.city }}</div>
+</div>
