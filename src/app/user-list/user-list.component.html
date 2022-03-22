@@ -1,4 +1,4 @@
-<div
+<!-- <div
   class="d-flex align-items-center mb-2"
   *ngFor="let user of Users; index as i"
 >
@@ -9,4 +9,9 @@
   </div>
   <div>{{ user.age }}</div>
   <div>{{ user.address.city }}</div>
-</div>
+</div> -->
+<app-user-single
+  *ngFor="let user of Users; index as i"
+  [index]="i"
+  [user]="user"
+></app-user-single>
