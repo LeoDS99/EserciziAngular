@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+
 import { Person, Address, Gender, Role } from '../models/User';
 
 @Component({
@@ -9,7 +10,11 @@ import { Person, Address, Gender, Role } from '../models/User';
 export class UserSingleComponent implements OnInit {
   @Input() index!: number;
   @Input() user!: Person;
-  constructor() {}
+  @Output() remove: EventEmitter<any> = new EventEmitter();
 
+  constructor() {}
+  removeItem() {
+    this.remove.emit();
+  }
   ngOnInit(): void {}
 }
