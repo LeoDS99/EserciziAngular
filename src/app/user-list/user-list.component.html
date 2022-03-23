@@ -10,9 +10,13 @@
   <div>{{ user.age }}</div>
   <div>{{ user.address.city }}</div>
 </div> -->
-<app-user-single
-  *ngFor="let user of Users; index as i"
-  [index]="i"
-  [user]="user"
-  (remove)="removeitem($event)"
-></app-user-single>
+<div *ngIf="Users.length > 0; else Nouser">
+  <app-user-single
+    *ngFor="let user of Users; index as i"
+    [index]="i"
+    [user]="user"
+    (remove)="removeitem($event)"
+  ></app-user-single>
+</div>
+
+<ng-template #Nouser> <p>Non sono presenti utenti</p></ng-template>
