@@ -1,4 +1,11 @@
-<div class="d-flex align-items-center mb-2">
+<div
+  class="d-flex align-items-center mb-2 w-50 border"
+  [ngClass]="{
+    'border-info': user.role === role.STAFF,
+    'border-warning': user.role === role.MANAGER,
+    'border-danger': user.role === role.ADMIN
+  }"
+>
   <p>{{ index + 1 }}.</p>
   <img src="{{ user.profilePhotoUrl }}" alt="" width="150" height="150" />
   <div>

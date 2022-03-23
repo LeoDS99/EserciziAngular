@@ -11,6 +11,7 @@ export class UserSingleComponent implements OnInit {
   @Input() index!: number;
   @Input() user!: Person;
   @Output() remove: EventEmitter<any> = new EventEmitter();
+  role = Role;
 
   constructor() {}
   removeItem() {
