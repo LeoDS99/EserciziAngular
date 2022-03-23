@@ -10,11 +10,11 @@ import { Person, Address, Gender, Role } from '../models/User';
 export class UserSingleComponent implements OnInit {
   @Input() index!: number;
   @Input() user!: Person;
-  @Output() remove: EventEmitter<any> = new EventEmitter();
+  @Output() remove: EventEmitter<number> = new EventEmitter();
 
   constructor() {}
-  removeItem() {
-    this.remove.emit();
+  removeItem(value: number) {
+    this.remove.emit(value);
   }
   ngOnInit(): void {}
 }
