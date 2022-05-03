@@ -10,6 +10,9 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { OrderListComponent } from './order-list/order-list.component';
 import { OrderSingleComponent } from './order-single/order-single.component';
 import { OrderDetailComponent } from './order-detail/order-detail.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AppRoutingModule } from './app.routing.module';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +24,12 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
     UserDetailComponent,
     OrderListComponent,
     OrderSingleComponent,
-    OrderDetailComponent
+    OrderDetailComponent,
+    NavbarComponent,
+    ErrorComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,9 +1,6 @@
-#container {
+.container {
   background-color: lightblue;
-  width: 45vw;
-  height: 80vh;
+  width: 100vw;
+  height: 100vh;
   text-align: center;
-}
-#flex {
-  height: 90%;
 }

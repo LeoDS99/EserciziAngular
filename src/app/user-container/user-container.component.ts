@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-user-container',
   templateUrl: './user-container.component.html',
-  styleUrls: ['./user-container.component.css']
+  styleUrls: ['./user-container.component.css'],
 })
 export class UserContainerComponent implements OnInit {
+  public showdetail: boolean = false;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  toggle() {
+    this.showdetail = !this.showdetail;
   }
-
+  ngOnInit(): void {}
 }

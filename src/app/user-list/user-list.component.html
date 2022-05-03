@@ -1,8 +1,17 @@
 <div class="container">
   <p>User-list.component</p>
   <div class="d-flex flex-column justify-content-start">
-    <app-user-single></app-user-single>
-    <app-user-single></app-user-single>
-    <app-user-single></app-user-single>
+    <app-user-single
+      [showdetail]="showdetail"
+      (toggle)="toggle.emit()"
+    ></app-user-single>
+    <app-user-single
+      [showdetail]="showdetail"
+      (toggle)="toggle.emit()"
+    ></app-user-single>
+    <app-user-single
+      [showdetail]="showdetail"
+      (toggle)="toggle.emit()"
+    ></app-user-single>
   </div>
 </div>

@@ -1,3 +1,7 @@
 .display-3 {
   text-align: center;
 }
+
+.box {
+  width: 100vw;
+}
