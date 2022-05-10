@@ -1,0 +1,5 @@
+<h1>Counter:{{ counterservice.takevalue() }}</h1>
+<app-edit-counter
+  (increase)="add($event)"
+  (decrease)="sub($event)"
+></app-edit-counter>
