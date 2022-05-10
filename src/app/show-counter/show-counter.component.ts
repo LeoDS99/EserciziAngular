@@ -8,6 +8,7 @@ import { CounterService } from '../services/counter.service';
 })
 export class ShowCounterComponent implements OnInit {
   constructor(public counterservice: CounterService) {}
+  Counter$ = this.counterservice.takevalue();
 
   add(value: number) {
     return this.counterservice.addvalue(value);

@@ -1,5 +1,11 @@
-<h1>Counter:{{ counterservice.takevalue() }}</h1>
+<div *ngIf="(Counter$ | async)! >= 0; else error">
+  <h1>Counter:{{ Counter$ | async }}</h1>
+</div>
 <app-edit-counter
   (increase)="add($event)"
   (decrease)="sub($event)"
 ></app-edit-counter>
+
+<ng-template #error>
+  <h1 class="red">Error, counter can't be negative</h1></ng-template
+>
